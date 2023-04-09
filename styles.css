@@ -21,6 +21,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000000;
 }
 
 main {
@@ -177,7 +178,6 @@ main {
   transform: translate(0px, 0px);
   animation-duration: 0.7s;
   animation-name: aparecer;
-
   background-color: antiquewhite;
   color: black;
 }
@@ -199,13 +199,80 @@ main {
 .boton {
   background-color: rgba(250, 250, 250, 0.7);
   transition: background-color 0.5s;
+  
 }
 
 .boton:hover {
   background-color: rgba(250, 250, 250, 0);
 }
+.sesion-dad{
+  position: relative;
 
-.bloque {
+}
+
+.sesion-box{
+   position: absolute;
+  /*transform: translate(0,10000000rem);
+  width: 10000rem;
+  height: 10000rem;
+  left: -500rem; */
+  transform: translate(0,10000000rem);
+  /* background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 10000rem; */
+}
+.sesion{
+  position: absolute;
+  display: grid;
+  grid-template-rows: 4rem repeat(4, 2rem);
+  min-width: 20rem;
+  min-height: 10rem;
+  padding-left: 1rem;
+  background-color: rgb(100, 175, 224);
+  border: solid black;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  /* transform: translate(0,10000000rem); */
+  left: -6.5rem;
+  z-index: 10;
+}
+.oscurecer{
+position: absolute;
+  /* display: none; */
+  background-color: rgba(0, 0, 0, 0.5);
+  left: -200rem;
+  top: -200rem;
+  width: 10000rem;
+  height: 10000rem;
+}
+
+.boton:focus+.sesion-box{
+  transform: translate(0,0);
+  animation-name: subir;
+  animation-duration: 0.5s;
+
+}
+
+
+
+.sesion-box:hover {
+  transform: translate(0,0);
+}
+
+.no-marg{
+  margin-bottom: 0;
+  
+}
+
+.center{
+  background-color: rgb(160, 160, 224);
+  width: 20rem;
+  height: 20rem;
+ left: 50%;
+ top: 50%;
+ 
+}
+/* .bloque {
   padding: 4rem;
   background-color: blue;
 }
@@ -269,5 +336,121 @@ main {
   height: 100px;
   background-color: brown;
   z-index: 200;
+} */
+
+
+
+.termporaly-drawer-box{
+  position: fixed;
+  height: 100%;
+  min-width: 0;
+  top: 5rem;
+  z-index: 1;
 }
+.interaction-area{
+  position: fixed;
+  height: 100%;
+  width: 1rem;
+  top: 5rem;
+  z-index: 2;
+}
+.termporaly-drawer{
+  position: absolute;
+  z-index: 1;
+  padding-right: 1rem;
+  background-color: rgba(250, 250, 250, 0)
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.termporaly-drawer-list{
+  display: grid;
+  grid-template-rows: repeat(8, 6rem);
+  list-style: none;
+  padding-left: 0;
+text-align: center; 
+
+}
+.interaction-area:hover .termporaly-drawer {
+width: 15rem;
+background-color: bisque;
+animation-duration: 1s;
+animation-name: drawer;
+opacity: 1;
+
+}
+
+@keyframes drawer{
+  from {
+    margin-right: 100%;
+    width: 0;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 15;
+  } 
+}
+
+.tooltip-option{
+  width: 15rem;
+  height: 15rem;
+  background-color: antiquewhite;
+  display: grid;
+  padding-left: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+ ;
+}
+.tooltip-option>div:hover{
+  color: gray;
+} 
+.tooltip-dad{
+  position: relative;
+}
+
+
+.tooltip {
+  position: absolute;
+  border: solid black;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  border-radius: 10%;
+  padding: 4px;
+  background-color: aquamarine;
+  color: black;
+  width: 6rem;
+  min-height: 3rem;
+  z-index: 30;
+  transform: translate(0, -100000px);
+}
+
+.tooltip-up{
+ bottom: 1rem;
+  left: -1rem;
+}
+
+.tooltip-down{
+  bottom: -3rem;
+  left: -1rem;
+}
+
+.tooltip-right{
+  bottom: -1.5rem;
+  left: 4rem;
+}
+
+.tooltip-left{
+  bottom: -1.5rem;
+  left: -4rem;
+}
+.tooltip-dad:hover .tooltip{
+  transform: translate(0,0);
+  animation-name: aparecer;
+  animation-duration: 0.7s;
+}
+
 
