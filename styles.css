@@ -1,70 +1,87 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+.broder {
+  width: 500px;
+  height: 500px;
+  background-color: coral;
+  padding: 100px;
+  border: 20px solid black;
+}
 
 .flex {
-    display: flex;
-    gap: 120px;
-    align-items: center;
-    justify-content: center;
-    background-color: pink;
-  }
-  
-  .logo {
-    margin: 0;
-    position: relative;
-  }
-
- 
-  .logo:hover {
-    color:rgba(0, 0, 0, 0.5)
-  }
-
-  .lista {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .lista li:hover{
-    color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .dropdowndad{
-    position: relative;
-    margin: 0;
-    
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.dropdown{
-    position: absolute;
-    display: grid;
-    width: 600px;
-    min-height: 100px;
-    grid-template-areas: ". title title"
-                         "nav  opt opt"
-                         "nav  opt opt";
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 200px 1fr 1fr;
-    
-    /* top: 20px; left: 25px; */
-    
-    /* top: -2000px; */
-    transform: translate(0, -100000px);
-    border-radius: 10px;
-    color:rgba(250, 250, 250, 0);
-    border: solid black;
-    background-color:antiquewhite;
-    /* display: none; */
-    color: black;
-    /* padding-bottom: 20px;
+main {
+  margin-top: 90px;
+}
+
+.logo {
+  margin: 0;
+  position: relative;
+}
+
+.logo:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.lista {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.lista li:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdowndad {
+  position: relative;
+  margin: 0;
+}
+
+.dropdown {
+  position: absolute;
+  display: grid;
+  width: 600px;
+  min-height: 100px;
+  grid-template-areas:
+    ". title title"
+    "nav  opt opt"
+    "nav  opt opt";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 200px 1fr 1fr;
+
+  /* top: 20px; left: 25px; */
+
+  /* top: -2000px; */
+  transform: translate(0, -100000px);
+  border-radius: 10px;
+  color: rgba(250, 250, 250, 0);
+  border: solid black;
+  background-color: antiquewhite;
+  /* display: none; */
+  color: black;
+  /* padding-bottom: 20px;
     padding-left: 10px; */
-    /* transition: all 0.3s;    */
-
+  /* transition: all 0.3s;    */
 }
 
-
-.columnas{
+.columnas {
   display: grid;
   grid-area: opt;
   grid-template-columns: 1fr 1fr;
@@ -72,27 +89,20 @@
   grid-column-gap: 20px;
   border-radius: 10px;
   border: solid black;
-  
-
 }
 
-.dropdowndad:hover .dropdown{
-        /* display: block; */
-        transform: translate(0px, 0px);
-        /* transform: translate(10px,2020px); */
-        /* animation-delay: 1s; */
-        animation-duration: 1s;
-        animation-fill-mode: backwards  ;
-        animation-name: subir;
-       
-
- 
-  
-        
-    }
+.dropdowndad:hover .dropdown {
+  /* display: block; */
+  transform: translate(0px, 0px);
+  /* transform: translate(10px,2020px); */
+  /* animation-delay: 1s; */
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-name: subir;
+}
 
 @keyframes subir {
-      /* from {
+  /* from {
         margin-left: 50%;
         width: 100%;
       }
@@ -101,99 +111,163 @@
         margin-left: 0%;
         width: 100%;
       } */
-      from{top: 5em;}
-      to{top: 1.2em;}
-        /* from{width: 10em;}
+  from {
+    top: 5em;
+  }
+  to {
+    top: 1.2em;
+  }
+  /* from{width: 10em;}
         to{width: 24em;} */
-    }
-
-@keyframes aparecer{
-  from{ opacity: 0;}
-  to{opacity: 1;}
 }
 
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-.titulo{
+.titulo {
   grid-area: title;
   padding-left: 10px;
-
 }
-.fuera2{
+.fuera2 {
   margin: 0;
   gap: 0;
   font-size: 12px;
   font-weight: normal;
 }
-.subtipe{
+.subtipe {
   grid-area: nav;
   font-weight: bold;
   font-size: 15px;
 }
 
-.subtipe .dropdowndad2:hover{
+.subtipe .dropdowndad2:hover {
   color: rgba(0, 0, 0, 0.5);
 }
-.dropdowndad2{
+.dropdowndad2 {
   position: relative;
-  
 }
-.dropdown2{
+.dropdown2 {
   position: absolute;
   display: grid;
   left: 200px;
   top: -47px;
   width: 394px;
-  height: 135px; 
+  height: 135px;
   transform: translate(0, -100000px);
   border-radius: 10px;
   border: solid black;
   font-size: 16px;
-  font-weight: normal
+  font-weight: normal;
 }
 
-.columnas2{
+.columnas2 {
   display: grid;
   margin-top: 5px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr); 
+  grid-template-rows: repeat(5, 1fr);
 }
 
-.dropdowndad2:hover .dropdown2{
+.dropdowndad2:hover .dropdown2 {
   transform: translate(0px, 0px);
   animation-duration: 0.7s;
   animation-name: aparecer;
-  
-  background-color:antiquewhite;
-  color: black;
 
-#toppaddin{
+  background-color: antiquewhite;
+  color: black;
+}
+
+#toppaddin {
   padding-top: 20px;
 }
 
-.fuera{
-  
+.fuera {
   margin: 0;
   margin-bottom: 5px;
 }
-
-
 
 /* .solution{
       position: relative;
       margin: 0;
 } */
-  
 
-  .boton {
-    background-color: rgba(250, 250, 250, 0.7);
-    transition: background-color 0.5s;
-  }
+.boton {
+  background-color: rgba(250, 250, 250, 0.7);
+  transition: background-color 0.5s;
+}
 
-  .boton:hover{
-    background-color: rgba(250, 250, 250, 0);
-  }
-  
-  .bloque {
-    padding: 4rem;
-    background-color: blue;
-  }
+.boton:hover {
+  background-color: rgba(250, 250, 250, 0);
+}
+
+.bloque {
+  padding: 4rem;
+  background-color: blue;
+}
+
+.ud {
+  font-size: 1em;
+}
+
+.box {
+  width: 50vw;
+  height: 50vh;
+  background-color: blue;
+  overflow-x: scroll;
+  overflow-y: auto;
+  position: relative;
+}
+
+.inner-box {
+  width: 80vw;
+  height: 800vh;
+  background-color: red;
+  position: absolute;
+  z-index: 100;
+}
+
+.text-container {
+  margin: 1rem 0;
+  width: 200px;
+  border: solid 1px black;
+  border-radius: 1rem;
+  height: 100px;
+}
+
+.text {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.daddy {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+
+.baby {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -400px;
+  background-color: aquamarine;
+  z-index: 99;
+}
+
+.fetus {
+  position: absolute;
+  width: min(4rem, 20px);
+  height: 100px;
+  background-color: brown;
+  z-index: 200;
+}
+
