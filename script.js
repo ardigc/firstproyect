@@ -49,7 +49,7 @@ console.log(object);
 // const arrowFunction = (num1, num2) => {
 //     return num1 * num2
 //   }
-  
+
 //   const res = arrowFunction(6 , 8)
 
 // function reassignFirst(array, nuevapalabra) {
@@ -61,8 +61,6 @@ console.log(object);
 
 // reassignFirst(arr, "hola");
 // console.log(arr);
-
-
 
 // const products = [
 //   {
@@ -129,12 +127,11 @@ console.log(object);
 // // Función para calcular sumatorio simple entre dos valores
 // // sumatorio(1, 9) -> Suma de todos los numeros entre 1 y 9 (incluidos)
 
-
 // function sumatorio (a){
 //     let numerosumado = 0;
 //     for (let x = 0; x <= a; x++) {
 //         numerosumado = numerosumado + x;
-        
+
 //     }
 //     console.log (numerosumado);
 // }
@@ -158,12 +155,12 @@ console.log(object);
 //     // let y = 0;
 //     for (let x = 0; x < num; x++) {
 //         denominador = num/x;
-//         if (Number.isInteger (denominador)) {  
-//             // denom[y] = denominador;         
+//         if (Number.isInteger (denominador)) {
+//             // denom[y] = denominador;
 //             // console.log(denominador);
 //             denom.push(denominador);
 //             // y++;
-//         }   
+//         }
 //     }
 //     return denom;
 // }
@@ -202,57 +199,48 @@ console.log(object);
 // }
 // numeroprimo(1579)
 
-function prueba(num, num2){
+function prueba(num, num2) {
   let numeros = [1, 2, 3, 4, 5];
   let copynumeros = numeros.slice();
   let ultnum = numeros.pop();
-  let pos =numeros.indexOf(3);
+  let pos = numeros.indexOf(3);
   let prinum = numeros.shift();
   let text = "es una string";
   let stolennumber = numeros.splice(1, 3, "me he colado");
   let varios = numeros.concat(copynumeros, stolennumber, ultnum, pos, prinum);
-  
 
-  
-  
   // Saca el 5 retornandolo
-  numeros.unshift (num2);
-  numeros.push (num);
+  numeros.unshift(num2);
+  numeros.push(num);
   console.log(numeros);
   console.log(ultnum);
   console.log(prinum);
   console.log(pos);
-  
+
   console.log(numeros);
   console.log(stolennumber);
   console.log(copynumeros);
   console.log(varios);
   let variosreves = varios.reverse();
   console.log(variosreves);
-  
-
 
   if (Array.isArray(copynumeros)) {
     console.log("Es un array");
-    
-  }
-   else {
+  } else {
     console.log("No es un array");
   }
-  ;
 }
 prueba(65, 55);
 
 function doblar(num1, num2, num3, num4) {
-  let numeros = [num1, num2, num3, num4]
+  let numeros = [num1, num2, num3, num4];
   let dobles = numeros.map(function (x) {
-    return x*2;
-  })
+    return x * 2;
+  });
   return dobles;
 }
 
-console.log(doblar(10, 25, 30, 90))
-
+console.log(doblar(10, 25, 30, 90));
 
 // function mayus(frase) {
 //   let fraseor = frase;
@@ -263,3 +251,40 @@ console.log(doblar(10, 25, 30, 90))
 //   })
 // }
 // mayus("hola loco")
+
+// const albaMeTieneEsclavizado = "Bro por favor rescatame";
+
+// console.log(albaMeTieneEsclavizado)
+
+// function log(texto) {
+//   console.log(texto)
+// }
+
+// log(albaMeTieneEsclavizado)
+
+// function needsCallback(fn) {
+//   // Hacemos cosas
+//   console.log("Desde el needsCallback");
+//   fn("Que viene, que viene");
+// }
+
+// function callback(text) {
+//   console.log(text);
+// }
+
+// needsCallback(callback);
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// function map(fn) {
+//   for (let i = 0; i < array.length; i++) {
+//     const item = array[i]
+//     fn(item, i, array)
+//   }
+// }
+
+// function multItemBy2(number) {
+//   console.log(number * 2)
+// }
+
+// map(multItemBy2)
+array.map()
