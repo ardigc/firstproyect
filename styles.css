@@ -246,12 +246,12 @@ position: absolute;
   height: 10000rem;
 }
 
-.boton:focus+.sesion-box{
+/* .boton:focus+.sesion-box{
   transform: translate(0,0);
   animation-name: subir;
   animation-duration: 0.5s;
 
-}
+} */
 
 
 
@@ -451,4 +451,16 @@ opacity: 1;
   transform: translate(0,0);
   animation-name: aparecer;
   animation-duration: 0.7s;
+}
+
+.red {
+  background-color: red;
+}
+
+.logo {
+  transition: all .2s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
 }
