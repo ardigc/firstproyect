@@ -472,6 +472,7 @@ opacity: 1;
 }
 .tooltip-dad:hover .tooltip{
   transform: translate(0,0);
+
   animation-name: aparecer;
   animation-duration: 0.7s;
 }
@@ -486,4 +487,28 @@ opacity: 1;
 
 .hide {
   opacity: 0;
+}
+
+.pizarra{
+  position: relative;
+  width: 50rem;
+  right: -25rem;
+  height: 50rem;
+  background-color: aqua;
+}
+.puntito{
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  
+  /* top: 10px;
+  left: 50%; */
+  background-color: brown;
+  border-radius: 50%;
+}
+.puntito-off{
+   display: none; 
+}
+.puntito-on{
+  display: block;
 }

@@ -43,3 +43,22 @@ btn.addEventListener("click", (ev) => {
     oscuro.setAttribute("class", "button-fondo oscurecer")
   }
 });
+
+const mouse = document.querySelector(".pizarra");
+
+mouse.addEventListener("mousemove",(ev) =>{
+  const punt = document.querySelector(".puntito");
+  punt.style.top = ev.offsetY + "px";
+  punt.style.left = ev.offsetX + "px";
+console.log("x", ev.offsetX);
+console.log("y", ev.offsetY);
+})
+
+mouse.addEventListener("mousedown", (ev)=>{
+  const punt = document.querySelector(".puntito");
+  punt.setAttribute("class", "puntito puntito-on")  ;
+})
+mouse.addEventListener("mouseup", (ev)=>{
+  const punt = document.querySelector(".puntito");
+  punt.setAttribute("class", "puntito puntito-off")  ;
+})
