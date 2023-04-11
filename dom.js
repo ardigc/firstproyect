@@ -25,3 +25,21 @@ if (btn && btn instanceof HTMLButtonElement) {
   })
   btn.addEventListener("mouseleave", () => {})
 }
+
+btn.addEventListener("click", (ev) => {
+  const sesion = document.querySelector(".sesion-box");
+  if (sesion.className.includes("sesion-box-hidden")){
+    sesion.setAttribute("class", "sesion-box sesion-box-show");
+  } else {
+    sesion.setAttribute("class", "sesion-box sesion-box-hidden");
+  }
+});
+
+btn.addEventListener("click", (ev) => {
+  const oscuro = document.querySelector(".button-fondo");
+  if (oscuro.className.includes("oscurecer")){
+    oscuro.setAttribute("class", "button-fondo");
+  } else {
+    oscuro.setAttribute("class", "button-fondo oscurecer")
+  }
+});

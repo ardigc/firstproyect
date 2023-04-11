@@ -122,6 +122,17 @@ main {
         to{width: 24em;} */
 }
 
+@keyframes bajar{
+  from {
+    top: 1.2em;
+    
+  }
+  to {
+    top: 5em;
+
+  }
+}
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -207,16 +218,21 @@ main {
 }
 .sesion-dad{
   position: relative;
+  z-index: 1;
 
 }
 
-.sesion-box{
+.sesion-box-hidden{
    position: absolute;
   /*transform: translate(0,10000000rem);
   width: 10000rem;
   height: 10000rem;
   left: -500rem; */
+  
+  animation-name: bajar;
+  animation-duration: 0.5s;
   transform: translate(0,10000000rem);
+  transition-delay: 0.4s;
   /* background-color: rgba(0, 0, 0, 0.5);
   padding-left: 10000rem; */
 }
@@ -239,6 +255,7 @@ main {
 .oscurecer{
 position: absolute;
   /* display: none; */
+  display: block;
   background-color: rgba(0, 0, 0, 0.5);
   left: -200rem;
   top: -200rem;
@@ -246,18 +263,24 @@ position: absolute;
   height: 10000rem;
 }
 
-/* .boton:focus+.sesion-box{
+.no-oscurecer{
+  display: none;
+}
+
+/* .boton:focus+.sesion-box-hide{
   transform: translate(0,0);
   animation-name: subir;
   animation-duration: 0.5s;
 
 } */
-
-
-
-.sesion-box:hover {
+.sesion-box-show{
+  position: absolute;
   transform: translate(0,0);
-}
+  animation-name: subir;
+  animation-duration: 0.5s;
+
+} 
+
 
 .no-marg{
   margin-bottom: 0;
