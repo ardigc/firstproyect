@@ -491,24 +491,28 @@ opacity: 1;
 
 .pizarra{
   position: relative;
-  width: 50rem;
+  width: 700px;
   right: -25rem;
-  height: 50rem;
+  height: 700px;
   background-color: aqua;
 }
-.puntito{
+/* .puntito{
   position: absolute;
   width: 1rem;
   height: 1rem;
   
-  /* top: 10px;
-  left: 50%; */
+  top: 10px;
+  left: 50%;
   background-color: brown;
   border-radius: 50%;
-}
-.puntito-off{
+} */
+/* .puntito-off{
    display: none; 
 }
 .puntito-on{
   display: block;
+} */
+.cajita{
+  position: absolute;
+  background-color: red;
 }
