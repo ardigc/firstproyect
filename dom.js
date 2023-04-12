@@ -46,19 +46,54 @@ btn.addEventListener("click", (ev) => {
 
 const mouse = document.querySelector(".pizarra");
 
-mouse.addEventListener("mousemove",(ev) =>{
-  const punt = document.querySelector(".puntito");
-  punt.style.top = ev.offsetY + "px";
-  punt.style.left = ev.offsetX + "px";
-console.log("x", ev.offsetX);
-console.log("y", ev.offsetY);
-})
+// mouse.addEventListener("mousemove",(ev) =>{
+//   const punt = document.querySelector(".puntito");
+//   punt.style.top = ev.offsetY + "px";
+//   punt.style.left = ev.offsetX + "px";
+// console.log("x", ev.offsetX);
+// console.log("y", ev.offsetY);
+// })
 
-mouse.addEventListener("mousedown", (ev)=>{
-  const punt = document.querySelector(".puntito");
-  punt.setAttribute("class", "puntito puntito-on")  ;
+// mouse.addEventListener("mousedown", (ev)=>{
+//   const punt = document.querySelector(".puntito");
+//   punt.setAttribute("class", "puntito puntito-on")  ;
+// })
+// mouse.addEventListener("mouseup", (ev)=>{
+//   const punt = document.querySelector(".puntito");
+//   punt.setAttribute("class", "puntito puntito-off")  ;
+// })
+
+mouse.addEventListener("mousedown", (ev) =>{
+  const box = document.querySelector(".cajita");
+  let x = ev.offsetX;
+  let y = ev.offsetY;
+  box.style.top = y + "px";
+  box.style.left = x + "px";
+  
+  console.log("x", x, "y", y);
+  mouse.addEventListener("mousemove", prueba);
+  //  (val) =>{
+    // let x1 = val.offsetX;
+    // let y1 = val.offsetY;
+    // console.log("x1", x1, "y1 ", y1);
+  // })
 })
-mouse.addEventListener("mouseup", (ev)=>{
-  const punt = document.querySelector(".puntito");
-  punt.setAttribute("class", "puntito puntito-off")  ;
+mouse.addEventListener("mouseup", (ev) =>{
+  const box = document.querySelector(".cajita");
+  box.style.display = "none";
+  mouse.removeEventListener("mousemove", prueba);
+  // (val) =>{
+  //   let x1 = val.offsetX;
+  //   let y1 = val.offsetY;
+  //   console.log("x1", x1, "y1 ", y1);    
+  // });
 })
+function prueba(val) {
+  const box = document.querySelector(".cajita");
+  let x1 = (700-val.offsetX);
+  let y1 = (700-val.offsetY);
+  box.style.bottom = y1 + "px";
+  box.style.right = x1 + "px";
+  box.style.display = "block";
+  console.log("x1", x1, "y1 ", y1);
+}
